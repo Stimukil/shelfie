@@ -10,13 +10,14 @@ module.exports = {
 
         res.status(200).send("this is a dumpster fire")
     },
-
-    putInventory: (req, res) => {
-        res.status(200).send(inventory)
-    },
-
+    
     postInventory = () => {
         axios.post("/api/inventory").then(res => this.setState({inventory: res.data}))
+    },
+
+    putInventory: (req, res) => {
+        
+        res.status(200).send(inventory)
     }
 
 }
