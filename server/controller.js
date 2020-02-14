@@ -1,4 +1,5 @@
 const axios = require ('axios');
+const express = require ('express');
 const dashboard = {}
 
 module.exports = {
@@ -10,8 +11,12 @@ module.exports = {
         res.status(200).send("this is a dumpster fire")
     },
 
-    pullInventory: (req, res) => {
+    putInventory: (req, res) => {
         res.status(200).send(inventory)
+    },
+
+    postInventory = () => {
+        axios.post("/api/inventory").then(res => this.setState({inventory: res.data}))
     }
 
 }

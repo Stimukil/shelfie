@@ -9,7 +9,9 @@ app.use(cors())
 
 app.get("/api/inventory", ctrl.getInventory)
 
-app.post("/api/product", ctrl.pullInventory)
+app.post("/api/inventory", ctrl.putInventory)
+
+app.
 
 
 PORT = 3456
