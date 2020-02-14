@@ -4,9 +4,14 @@ const massive = require("massive")
 const cors = require("cors")
 const app = express();
 
+app.use(expess.json())
+app.use(cors())
+
+app.get("/api/inventory", ctrl.getInventory)
+
+app.post("/api/product", ctrl.pullInventory)
+
+
 PORT = 3456
 
 app.listen(PORT, () => console.log(`Listening on port ${PORT}`))
-
-app.use(expess.json())
-app.use(cors())
